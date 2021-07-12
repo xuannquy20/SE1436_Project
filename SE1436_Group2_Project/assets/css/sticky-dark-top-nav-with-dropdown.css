@@ -177,6 +177,10 @@ a.navbar-link.login:hover {
   border: none;
 }
 
+.nav{
+    display: flex;
+}
+
 .btn-default {
   color: #ffffff;
   background-color: #df4c40;
