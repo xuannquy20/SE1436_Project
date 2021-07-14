@@ -14,7 +14,6 @@
     </asp:ContentPlaceHolder>
 </head>
 <body>
-
     <form id="form1" runat="server">
         <div>
         <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
@@ -23,7 +22,7 @@
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav nav-right">
-                    <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Trang chủ</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="Trangchu.aspx" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Trang chủ</a></li>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="font-family: 'Roboto Slab', serif;color: #ffffff;">Hạng phòng</a>
                         <div class="dropdown-menu" role="menu">
                             <a class="dropdown-item room" role="presentation" href="#">Giường đơn</a>
@@ -31,15 +30,12 @@
                             <a class="dropdown-item room" role="presentation" href="#">Phòng VIP</a>
                         </div>
                     </li>
-                    <%if ((bool)Session["role"] == true)
-                        {%>
+                    <% if ((String) Session["role"] == "0") {%>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Lịch sử đặt phòng</a></li>
-                    <%}
-                        else
-                        {%>
+                    <%} else if ((String) Session["role"] == "1") {%>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách các phòng</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách yêu cầu</a></li>
-                     <%} %>
+                     <%}%>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="about.html" style="color: #ffffff;font-family: 'Roboto Slab', serif;">Đánh giá</a></li>
                 </ul>
                 <p class="ml-auto navbar-text actions">

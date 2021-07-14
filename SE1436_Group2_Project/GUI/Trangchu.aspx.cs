@@ -11,7 +11,9 @@ namespace SE1436_Group2_Project.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack) {
+                Image1.ImageUrl = "/Images/main.jpg";
+            }
         }
     }
 }
