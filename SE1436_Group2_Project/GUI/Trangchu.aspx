@@ -3,6 +3,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center">
-        <asp:Image ID="Image1" runat="server" style="max-height:1519px;max-width:1519px;height:auto;width:auto;margin: 0 auto;" />
+        <asp:Image ID="Image1" runat="server" style="width: 100%" />
     </asp:Panel>
 </asp:Content>
