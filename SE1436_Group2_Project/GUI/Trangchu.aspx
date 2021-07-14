@@ -2,8 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p>
-        &nbsp;</p>
     <asp:Panel ID="Panel1" runat="server" HorizontalAlign="Center">
         <asp:Image ID="Image1" runat="server" style="max-height:1519px;max-width:1519px;height:auto;width:auto;margin: 0 auto;" />
     </asp:Panel>
