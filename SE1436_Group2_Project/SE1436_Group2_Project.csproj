@@ -58,6 +58,7 @@
     <Content Include="assets\fonts\fontawesome-webfont.woff" />
     <Content Include="assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="Images\logo.png" />
     <Content Include="GUI\Trangchu.aspx" />
     <Content Include="Images\main.jpg" />
     <Content Include="Site1.Master" />
@@ -72,8 +73,6 @@
     <Content Include="assets\css\Pretty-Footer.css" />
     <Content Include="assets\fonts\font-awesome.min.css" />
     <Content Include="assets\fonts\fontawesome-webfont.svg" />
-    <Content Include="assets\img\logo.png" />
-    <Content Include="assets\img\thiet-ke-logo-khach-san-4_1586876601.png" />
     <Content Include="assets\js\jquery.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>

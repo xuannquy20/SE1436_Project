@@ -18,7 +18,7 @@
         <div>
         <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
         <div class="container">
-            <div><a class="navbar-brand" href="#"><span style="font-family: 'Roboto Slab', serif;"><img src="../assets/img/thiet-ke-logo-khach-san-4_1586876601.png" style="width: 125px;"></span> </a></div>
+            <div><a class="navbar-brand" href="#"><span style="font-family: 'Roboto Slab', serif;"><img src="/Images/logo.png" style="width: 170px;"></span> </a></div>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav nav-right">
@@ -37,6 +37,7 @@
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách yêu cầu</a></li>
                      <%}%>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="about.html" style="color: #ffffff;font-family: 'Roboto Slab', serif;">Đánh giá</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html" style="color: #ffffff;font-family: 'Roboto Slab', serif;">Luật</a></li>
                 </ul>
                 <p class="ml-auto navbar-text actions">
                 <% if ((String) Session["acc"] == null) {%>
@@ -55,13 +56,13 @@
     <footer>
         <div class="row">
             <div class="col-sm-6 col-md-4 footer-navigation">
-                <h3><a href="#">Nice Dream</a></h3>
+                <h3><a href="#">QBDH</a></h3>
                 <p class="links">Sự hài lòng của bạn là thành công của chúng tôi</p>
-                <p class="company-name">Bản quyền © 2016</p>
+                <p class="company-name">Bản quyền © 2021</p>
             </div>
             <div class="col-sm-6 col-md-4 footer-contacts">
                 <div><span class="fa fa-map-marker footer-contacts-icon"> </span>
-                    <p><span class="new-line-span">Số 69 đường lẩu bò</span> Xã thịt nướng, Tỉnh mỳ trộn</p>
+                    <p><span class="new-line-span">Ngõ 5 chuồng chó, tìm shop đồ ăn cho mèo</span>Cạnh quán thịt dê rẽ trái, thấy quán lẩu bò đi thẳng cạnh tiệm thịt heo</p>
                 </div>
                 <div><i class="fa fa-phone footer-contacts-icon"></i>
                     <p class="footer-center-info email text-left"> +666 36 29</p>
