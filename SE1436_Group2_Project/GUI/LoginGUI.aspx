@@ -63,10 +63,9 @@
             <br />
             <asp:TextBox ID="TextBox1" runat="server" Width="300px" CssClass="mid form-control" Height="51px"></asp:TextBox>
             <br />
-            <br />
             <asp:TextBox ID="TextBox2" runat="server" Width="300px" CssClass="mid form-control" Height="51px"></asp:TextBox>
-            <asp:CheckBox ID="CheckBox1" runat="server" Text="Ghi nhớ đăng nhập" CssClass="check"/>
             <br />
+            <asp:CheckBox ID="CheckBox1" runat="server" Text="Ghi nhớ đăng nhập" CssClass="check"/>
             <br />
             <asp:Button ID="Button1" runat="server" Text="Đăng nhập" Width="130px" CssClass="bt-l btn btn-success"/>
             <asp:Button ID="Button2" runat="server" Text="Đăng ký" Width="130px" CssClass="bt-r btn btn-danger"/>
