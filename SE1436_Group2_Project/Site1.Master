@@ -30,21 +30,20 @@
                             <a class="dropdown-item room" role="presentation" href="#">Phòng VIP</a>
                         </div>
                     </li>
-                    <% if ((String) Session["role"] == "0") {%>
+                    <% if ((int) Session["role"] == 0) {%>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Lịch sử đặt phòng</a></li>
-                    <%} else if ((String) Session["role"] == "1") {%>
+                    <%} else if ((int) Session["role"] == 1) {%>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách các phòng</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách yêu cầu</a></li>
                      <%}%>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="about.html" style="color: #ffffff;font-family: 'Roboto Slab', serif;">Đánh giá</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html" style="color: #ffffff;font-family: 'Roboto Slab', serif;">Luật</a></li>
                 </ul>
                 <p class="ml-auto navbar-text actions">
-                <% if ((String) Session["acc"] == null) {%>
+                <% if ((String) Session["user"] == null) {%>
                 <a class="fix" href="LoginGUI.aspx" style="font-family: 'Roboto Slab', serif; color: white; text-decoration: none;">Đăng nhập</a>
                 <a class="btn btn-dark login" href="LoginGUI.aspx" style="font-family: 'Roboto Slab', serif;">Đăng ký</a>
                 <%} else { %>
-                 %><a class="btn btn-light action-button" role="button" href ="LogoutGUI.aspx" style="font-family: 'Roboto Slab', serif;color: rgba(0,0,0,0.9);background-color: #ffffff;">Logout<%=" (" + (String) Session["user"] + ") "%></a>
+                <a class="btn btn-light action-button" role="button" href ="LogoutGUI.aspx" style="font-family: 'Roboto Slab', serif;color: rgba(0,0,0,0.9);background-color: #ffffff;">Logout<%=" (" + (String) Session["user"] + ") "%></a>
                 <%} %>
         </div>
         </div>

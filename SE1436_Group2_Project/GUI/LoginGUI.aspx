@@ -60,15 +60,18 @@
     <form id="form1" runat="server" class="keep">
         <div class="cen">
             <asp:Image ID="Image1" runat="server" Height="113px" ImageUrl="~/Images/logo.png" CssClass="logo"/>
+            <asp:Label ID="Label1" runat="server" Text="Sai tài khoản hoặc mật khẩu" CssClass="check" Visible="False"></asp:Label>
             <br />
-            <asp:TextBox ID="TextBox1" runat="server" Width="300px" CssClass="mid form-control" Height="51px"></asp:TextBox>
+            <asp:TextBox ID="txtUsername" runat="server" Width="300px" CssClass="mid form-control" Height="51px" OnTextChanged="txtUsername_TextChanged"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Không được bỏ trống tên tài khoản" CssClass="check"></asp:RequiredFieldValidator>
             <br />
-            <asp:TextBox ID="TextBox2" runat="server" Width="300px" CssClass="mid form-control" Height="51px"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" Width="300px" CssClass="mid form-control" Height="51px" TextMode="Password" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="Không được bỏ trống mật khẩu" CssClass="check"></asp:RequiredFieldValidator>
             <br />
             <asp:CheckBox ID="CheckBox1" runat="server" Text="Ghi nhớ đăng nhập" CssClass="check"/>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Đăng nhập" Width="130px" CssClass="bt-l btn btn-success"/>
-            <asp:Button ID="Button2" runat="server" Text="Đăng ký" Width="130px" CssClass="bt-r btn btn-danger"/>
+            <asp:Button ID="Button1" runat="server" Text="Đăng nhập" Width="130px" CssClass="bt-l btn btn-success" OnClick="Button1_Click"/>
+            <asp:Button ID="Button2" runat="server" Text="Đăng ký" Width="130px" CssClass="bt-r btn btn-danger" CausesValidation="False"/>
         </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

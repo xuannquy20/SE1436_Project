@@ -80,6 +80,8 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO.cs" />
+    <Compile Include="DTL\User.cs" />
     <Compile Include="GUI\LoginGUI.aspx.cs">
       <DependentUpon>LoginGUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -103,10 +105,7 @@
       <DependentUpon>Site1.Master</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAL\" />
-    <Folder Include="DTL\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
