@@ -34,6 +34,17 @@ namespace SE1436_Group2_Project.GUI
                 };
                 Session["user"] = u.Username;
                 Session["role"] = u.Role;
+                if (CheckBox1.Checked)
+                {
+                    HttpCookie user = new HttpCookie("user");
+                    user.Value = u.Username;
+                    HttpCookie role = new HttpCookie("role");
+                    role.Value = u.Role.ToString();
+                    user.Expires = DateTime.Now.AddYears(10);
+                    role.Expires = DateTime.Now.AddYears(10);
+                    Response.Cookies.Add(user);
+                    Response.Cookies.Add(role);
+                }
                 Response.Redirect("Trangchu.aspx");
             }
             else
@@ -50,6 +61,11 @@ namespace SE1436_Group2_Project.GUI
         protected void txtPassword_TextChanged(object sender, EventArgs e)
         {
             Label1.Visible = false;
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("DangkyGUI.aspx");
         }
     }
 }

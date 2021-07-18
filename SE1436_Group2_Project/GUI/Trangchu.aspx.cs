@@ -13,6 +13,11 @@ namespace SE1436_Group2_Project.GUI
         {
             if (!IsPostBack) {
                 Image1.ImageUrl = "/Images/main1.jpg";
+                if (Request.Cookies["user"] != null)
+                {
+                    Session["user"] = Request.Cookies["user"].Value.ToString();
+                    Session["role"] = Request.Cookies["role"].Value.ToString();
+                }
             }
         }
     }

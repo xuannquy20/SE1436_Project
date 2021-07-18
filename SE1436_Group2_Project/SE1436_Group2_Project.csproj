@@ -58,7 +58,9 @@
     <Content Include="assets\fonts\fontawesome-webfont.woff" />
     <Content Include="assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="GUI\DangkyGUI.aspx" />
     <Content Include="GUI\LoginGUI.aspx" />
+    <Content Include="GUI\LogoutGUI.aspx" />
     <Content Include="Images\logo.png" />
     <Content Include="GUI\Trangchu.aspx" />
     <Content Include="Images\main.jpg" />
@@ -82,12 +84,26 @@
   <ItemGroup>
     <Compile Include="DAO.cs" />
     <Compile Include="DTL\User.cs" />
+    <Compile Include="GUI\DangkyGUI.aspx.cs">
+      <DependentUpon>DangkyGUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\DangkyGUI.aspx.designer.cs">
+      <DependentUpon>DangkyGUI.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\LoginGUI.aspx.cs">
       <DependentUpon>LoginGUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI\LoginGUI.aspx.designer.cs">
       <DependentUpon>LoginGUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\LogoutGUI.aspx.cs">
+      <DependentUpon>LogoutGUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\LogoutGUI.aspx.designer.cs">
+      <DependentUpon>LogoutGUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Trangchu.aspx.cs">
       <DependentUpon>Trangchu.aspx</DependentUpon>

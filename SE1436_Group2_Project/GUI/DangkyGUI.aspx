@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="LoginGUI.aspx.cs" Inherits="SE1436_Group2_Project.GUI.LoginGUI" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="DangkyGUI.aspx.cs" Inherits="SE1436_Group2_Project.GUI.DangkyGUI" %>
 
 <!DOCTYPE html>
 
@@ -60,18 +60,19 @@
     <form id="form1" runat="server" class="keep">
         <div class="cen">
             <asp:Image ID="Image1" runat="server" Height="113px" ImageUrl="~/Images/logo.png" CssClass="logo"/>
-            <asp:Label ID="Label1" runat="server" Text="Sai tài khoản hoặc mật khẩu" CssClass="check" Visible="False"></asp:Label>
+            <asp:Label ID="Label1" runat="server" Text="Tài khoản đã trùng" CssClass="check" Visible="False"></asp:Label>
             <br />
-            <asp:TextBox ID="txtUsername" runat="server" Width="300px" CssClass="mid form-control" Height="51px" placeholder="Tên tài khoản" OnTextChanged="txtUsername_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="txtUsername" runat="server" Width="300px" placeholder="Tên tài khoản" CssClass="mid form-control" Height="51px"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtUsername" ErrorMessage="Không được bỏ trống tên tài khoản" CssClass="check"></asp:RequiredFieldValidator>
             <br />
-            <asp:TextBox ID="txtPassword" runat="server" Width="300px" CssClass="mid form-control" Height="51px" placeholder="Mật khẩu" TextMode="Password" OnTextChanged="txtPassword_TextChanged"></asp:TextBox>
+            <asp:TextBox ID="txtPassword" runat="server" Width="300px" CssClass="mid form-control" Height="51px" placeholder="Mật khẩu" TextMode="Password"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtPassword" ErrorMessage="Không được bỏ trống mật khẩu" CssClass="check"></asp:RequiredFieldValidator>
             <br />
-            <asp:CheckBox ID="CheckBox1" runat="server" Text="Ghi nhớ đăng nhập" CssClass="check"/>
+            <asp:TextBox ID="txtPassword0" runat="server" Width="300px" CssClass="mid form-control" Height="51px" placeholder="Nhập lại mật khẩu" TextMode="Password"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword0" ErrorMessage="Không được bỏ trống mật khẩu" CssClass="check"></asp:RequiredFieldValidator>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Đăng nhập" Width="130px" CssClass="bt-l btn btn-success" OnClick="Button1_Click"/>
-            <asp:Button ID="Button2" runat="server" Text="Đăng ký" Width="130px" CssClass="bt-r btn btn-danger" CausesValidation="False" OnClick="Button2_Click"/>
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtPassword0" ErrorMessage="Mật khẩu nhập lại không trùng" CssClass="check"></asp:CompareValidator>
+            <asp:Button ID="Button1" runat="server" Text="Đăng ký" Width="130px" CssClass="bt-l btn btn-success" OnClick="Button1_Click"/>
         </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
