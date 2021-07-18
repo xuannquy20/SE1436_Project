@@ -58,10 +58,12 @@
     <Content Include="assets\fonts\fontawesome-webfont.woff" />
     <Content Include="assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="GUI\LoginGUI.aspx" />
     <Content Include="Images\logo.png" />
     <Content Include="GUI\Trangchu.aspx" />
     <Content Include="Images\main.jpg" />
     <Content Include="Images\main1.jpg" />
+    <Content Include="Images\login.jpg" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -78,6 +80,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\LoginGUI.aspx.cs">
+      <DependentUpon>LoginGUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\LoginGUI.aspx.designer.cs">
+      <DependentUpon>LoginGUI.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Trangchu.aspx.cs">
       <DependentUpon>Trangchu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
