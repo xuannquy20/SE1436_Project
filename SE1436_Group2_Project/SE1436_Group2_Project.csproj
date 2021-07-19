@@ -59,13 +59,17 @@
     <Content Include="assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="assets\fonts\FontAwesome.otf" />
     <Content Include="GUI\DangkyGUI.aspx" />
+    <Content Include="GUI\FeedbackGUI.aspx" />
     <Content Include="GUI\LoginGUI.aspx" />
     <Content Include="GUI\LogoutGUI.aspx" />
+    <Content Include="Images\Botón_Me_gusta.svg.png" />
+    <Content Include="Images\dislike-3065814-2548036.png" />
     <Content Include="Images\logo.png" />
     <Content Include="GUI\Trangchu.aspx" />
     <Content Include="Images\main.jpg" />
     <Content Include="Images\main1.jpg" />
     <Content Include="Images\login.jpg" />
+    <Content Include="Images\vote.png" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -90,6 +94,13 @@
     </Compile>
     <Compile Include="GUI\DangkyGUI.aspx.designer.cs">
       <DependentUpon>DangkyGUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\FeedbackGUI.aspx.cs">
+      <DependentUpon>FeedbackGUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\FeedbackGUI.aspx.designer.cs">
+      <DependentUpon>FeedbackGUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\LoginGUI.aspx.cs">
       <DependentUpon>LoginGUI.aspx</DependentUpon>

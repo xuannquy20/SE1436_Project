@@ -72,6 +72,13 @@
             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="txtPassword0" ErrorMessage="Không được bỏ trống mật khẩu" CssClass="check"></asp:RequiredFieldValidator>
             <br />
             <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="txtPassword" ControlToValidate="txtPassword0" ErrorMessage="Mật khẩu nhập lại không trùng" CssClass="check"></asp:CompareValidator>
+            <br />
+            <asp:TextBox ID="txtName" runat="server" Width="300px" CssClass="mid form-control" Height="51px" placeholder="Nhập tên của bạn"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="txtName" ErrorMessage="Không được bỏ trống tên" CssClass="check"></asp:RequiredFieldValidator>
+            <br />
+            <asp:TextBox ID="txtSdt" runat="server" Width="300px" CssClass="mid form-control" Height="51px" placeholder="Nhập số điện thoại"></asp:TextBox>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtSdt" ErrorMessage="Không được bỏ trống số điện thoại" CssClass="check"></asp:RequiredFieldValidator>
+            <br />
             <asp:Button ID="Button1" runat="server" Text="Đăng ký" Width="130px" CssClass="bt-l btn btn-success" OnClick="Button1_Click"/>
         </div>
     </form>

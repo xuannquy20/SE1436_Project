@@ -36,12 +36,12 @@
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách các phòng</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách yêu cầu</a></li>
                      <%}%>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="about.html" style="color: #ffffff;font-family: 'Roboto Slab', serif;">Đánh giá</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="FeedbackGUI.aspx" style="color: #ffffff;font-family: 'Roboto Slab', serif;">Đánh giá</a></li>
                 </ul>
                 <p class="ml-auto navbar-text actions">
                 <% if ((String) Session["user"] == null) {%>
                 <a class="fix" href="LoginGUI.aspx" style="font-family: 'Roboto Slab', serif; color: white; text-decoration: none;">Đăng nhập</a>
-                <a class="btn btn-dark login" href="LoginGUI.aspx" style="font-family: 'Roboto Slab', serif;">Đăng ký</a>
+                <a class="btn btn-dark login" href="DangkyGUI.aspx" style="font-family: 'Roboto Slab', serif;">Đăng ký</a>
                 <%} else { %>
                 <a class="btn btn-light action-button" role="button" href ="LogoutGUI.aspx" style="font-family: 'Roboto Slab', serif;color: rgba(0,0,0,0.9);background-color: #ffffff;">Logout<%=" (" + (String) Session["user"] + ") "%></a>
                 <%} %>
@@ -272,6 +272,50 @@ p.navbar-text.navbar-right.actions {
 .btn {
   font-family: 'Roboto';
   font-weight: 400;
+}
+.div-feed{
+        width: 1000px;
+        height: auto;
+        margin: 0px auto;
+        background-color:white;
+        border: 2px solid gray;
+        border-radius: 10px;
+        padding: 10px 0px;
+    }
+
+.fbcen{
+    margin: 0 auto;
+}
+
+.mg-bt{
+    display: flex;
+    margin-left: 248px;
+}
+
+.bg-fb{
+    background-color: gray;
+    width: 100%;
+    height: auto;
+}
+
+.abc{
+    display:flex;
+    align-items: center;
+}
+.star-l{
+    margin-left: 45%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 3px;
+}
+.star-r{
+    margin-right: 45%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 3px;
+}
+.box-fb{
+    padding: 0px 248px;
 }
         </style>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

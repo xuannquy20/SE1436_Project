@@ -30,12 +30,19 @@ namespace SE1436_Group2_Project.GUI
             }
             else
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO [csProject].[dbo].[Account]([username] ,[password] ,[isStaff]) VALUES (@u ,@p , 0)");
+                SqlCommand cmd = new SqlCommand("INSERT INTO [csProject].[dbo].[Account] VALUES (@u ,@p , 0, 0, @n, @sdt)");
                 cmd.Parameters.AddWithValue("@u",txtUsername.Text);
                 cmd.Parameters.AddWithValue("@p", txtPassword.Text);
+                cmd.Parameters.AddWithValue("@n", txtName.Text);
+                cmd.Parameters.AddWithValue("@sdt", txtSdt.Text);
                 DAO.UpdateTable(cmd);
                 Response.Redirect("LoginGUI.aspx");
             }
+        }
+
+        protected void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
