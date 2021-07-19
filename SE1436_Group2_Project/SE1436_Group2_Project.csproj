@@ -58,12 +58,14 @@
     <Content Include="assets\fonts\fontawesome-webfont.woff" />
     <Content Include="assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="assets\fonts\FontAwesome.otf" />
+    <Content Include="GUI\AllFeedback.aspx" />
     <Content Include="GUI\DangkyGUI.aspx" />
     <Content Include="GUI\FeedbackGUI.aspx" />
     <Content Include="GUI\LoginGUI.aspx" />
     <Content Include="GUI\LogoutGUI.aspx" />
-    <Content Include="Images\Botón_Me_gusta.svg.png" />
-    <Content Include="Images\dislike-3065814-2548036.png" />
+    <Content Include="Images\bg-fb.jpg" />
+    <Content Include="Images\like.png" />
+    <Content Include="Images\dislike.png" />
     <Content Include="Images\logo.png" />
     <Content Include="GUI\Trangchu.aspx" />
     <Content Include="Images\main.jpg" />
@@ -88,6 +90,13 @@
   <ItemGroup>
     <Compile Include="DAO.cs" />
     <Compile Include="DTL\User.cs" />
+    <Compile Include="GUI\AllFeedback.aspx.cs">
+      <DependentUpon>AllFeedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\AllFeedback.aspx.designer.cs">
+      <DependentUpon>AllFeedback.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DangkyGUI.aspx.cs">
       <DependentUpon>DangkyGUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

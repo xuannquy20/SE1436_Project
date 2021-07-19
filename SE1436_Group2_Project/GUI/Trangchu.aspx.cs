@@ -17,6 +17,7 @@ namespace SE1436_Group2_Project.GUI
                 {
                     Session["user"] = Request.Cookies["user"].Value.ToString();
                     Session["role"] = Request.Cookies["role"].Value.ToString();
+                    Session["comment"] = Request.Cookies["comment"].Value.ToString();
                 }
             }
         }

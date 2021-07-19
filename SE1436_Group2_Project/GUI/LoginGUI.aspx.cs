@@ -30,20 +30,35 @@ namespace SE1436_Group2_Project.GUI
                 User u = new User
                 {
                     Username = dr["username"].ToString(),
-                    Role = int.Parse(dr["isStaff"].ToString())
+                    Role = int.Parse(dr["isStaff"].ToString()),
+                    IsBooked = int.Parse(dr["isBooked"].ToString()),
+                    Name = dr["name"].ToString(),
+                    Phone = dr["phone"].ToString(),
+                    CanComment = int.Parse(dr["canComment"].ToString()),
+                    Commented = int.Parse(dr["commented"].ToString())
                 };
                 Session["user"] = u.Username;
                 Session["role"] = u.Role;
+                Session["comment"] = u.CanComment;
+                Session["commented"] = u.Commented;
                 if (CheckBox1.Checked)
                 {
                     HttpCookie user = new HttpCookie("user");
                     user.Value = u.Username;
                     HttpCookie role = new HttpCookie("role");
                     role.Value = u.Role.ToString();
+                    HttpCookie comment = new HttpCookie("comment");
+                    comment.Value = u.CanComment.ToString();
+                    HttpCookie commented = new HttpCookie("commented");
+                    commented.Value = u.Commented.ToString();
                     user.Expires = DateTime.Now.AddYears(10);
                     role.Expires = DateTime.Now.AddYears(10);
+                    comment.Expires = DateTime.Now.AddYears(10);
+                    commented.Expires = DateTime.Now.AddYears(10);
                     Response.Cookies.Add(user);
                     Response.Cookies.Add(role);
+                    Response.Cookies.Add(comment);
+                    Response.Cookies.Add(commented);
                 }
                 Response.Redirect("Trangchu.aspx");
             }

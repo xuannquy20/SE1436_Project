@@ -80,6 +80,7 @@
         </div>
     </footer>
 <style type="text/css">
+    
     .navigation-clean-button {
   background: #222222;
   padding-top: 10px;
@@ -293,7 +294,7 @@ p.navbar-text.navbar-right.actions {
 }
 
 .bg-fb{
-    background-color: gray;
+    background-color: antiquewhite;
     width: 100%;
     height: auto;
 }
