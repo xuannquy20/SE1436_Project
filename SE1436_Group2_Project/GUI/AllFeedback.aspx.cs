@@ -1,6 +1,7 @@
 ﻿using Lab3_Template.DAL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -12,28 +13,30 @@ namespace SE1436_Group2_Project.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string sql = "select username, liked, content from feedback";
-            GridView1.DataSource = DAO.GetDataTable(sql);
-            GridView1.DataBind();
-        }
-
-        protected void GridView1_DataBound(object sender, EventArgs e)
-        {
-            foreach (GridViewRow row in GridView1.Rows)
+            string sql = "select a.name, liked, content from feedback f join Account a on f.username = a.username order by f.id";
+            DataTable d = DAO.GetDataTable(sql);
+            foreach (DataRow r in d.Rows)
             {
-                if (row.Cells[1].Text == "LIKE")
+                Label user = new Label();
+                Image i = new Image();
+                Label content = new Label();
+                user.Text = r["name"].ToString() + "<br/>";
+                if (r["liked"].ToString() == "LIKE")
                 {
-                    row.Cells[1].ForeColor = System.Drawing.Color.Green;
+                    i.ImageUrl = "../Images/like.png";
                 }
                 else
                 {
-                    row.Cells[1].ForeColor = System.Drawing.Color.DarkRed;
+                    i.ImageUrl = "../Images/dislike.png";
                 }
-                row.Cells[1].Font.Bold = true;
-                row.Cells[1].Height = 100;
-                row.Cells[0].Width = 80;
-                row.Cells[1].Width = 80;
+                content.Text = "<br/>" + r["content"].ToString() + "<br/>" + "________________________________________________________________" + "<br/>";
+                user.Font.Bold = true;
+                i.Width = 20;
+                Panel1.Controls.Add(user);
+                Panel1.Controls.Add(i);
+                Panel1.Controls.Add(content);
             }
         }
+
     }
 }

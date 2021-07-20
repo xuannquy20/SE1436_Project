@@ -15,9 +15,33 @@ namespace SE1436_Group2_Project.GUI
         protected void Page_Load(object sender, EventArgs e)
         {
                 if(!IsPostBack){ 
-                string sql = "select top 3 username, liked, content from feedback order by id desc";
-                GridView1.DataSource = DAO.GetDataTable(sql);
-                GridView1.DataBind();
+                string sql = "select top 3 a.name, liked, content from feedback f join Account a on f.username = a.username order by f.id";
+                DataTable d = DAO.GetDataTable(sql);
+                foreach(DataRow r in d.Rows)
+                {
+                    Label user = new Label();
+                    Image i = new Image();
+                    Label content = new Label();
+                    user.Text = r["name"].ToString() + "<br/>";
+                    if(r["liked"].ToString() == "LIKE")
+                    {
+                        i.ImageUrl = "../Images/like.png";
+                    }
+                    else
+                    {
+                        i.ImageUrl = "../Images/dislike.png";
+                    }
+                    content.Text = "<br/>" + r["content"].ToString() + "<br/>" + "________________________________________________________________" + "<br/>";
+                    user.Font.Bold = true;
+                    i.Width = 20;
+                    Panel1.Controls.Add(user);
+                    Panel1.Controls.Add(i);
+                    Panel1.Controls.Add(content);
+                }
+                HyperLink lb = new HyperLink();
+                lb.Text = "Nhấn để xem tất cả bình luận>>>";
+                lb.NavigateUrl = "AllFeedback.aspx";
+                Panel1.Controls.Add(lb);
                 if (Session["commented"]!=null && Session["commented"].ToString() == "1")
                 {
                 string cmd = "select content from feedback where username = '" + Session["user"].ToString() + "'";
@@ -41,24 +65,6 @@ namespace SE1436_Group2_Project.GUI
             Button1.Enabled = true;
             ImageButton1.BackColor = System.Drawing.Color.White;
             ImageButton2.BackColor = System.Drawing.Color.SkyBlue;
-        }
-
-        protected void GridView1_DataBound(object sender, EventArgs e)
-        {
-            foreach (GridViewRow row in GridView1.Rows)
-            {
-                if(row.Cells[1].Text == "LIKE") {
-                    row.Cells[1].ForeColor = System.Drawing.Color.Green;
-                }
-                else
-                {
-                    row.Cells[1].ForeColor = System.Drawing.Color.DarkRed;
-                }
-                row.Cells[1].Font.Bold = true;
-                row.Cells[1].Height = 100;
-                row.Cells[0].Width = 80;
-                row.Cells[1].Width = 80;
-            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)

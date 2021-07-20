@@ -60,7 +60,9 @@
     <Content Include="assets\fonts\FontAwesome.otf" />
     <Content Include="GUI\AllFeedback.aspx" />
     <Content Include="GUI\DangkyGUI.aspx" />
+    <Content Include="GUI\deletebook.aspx" />
     <Content Include="GUI\FeedbackGUI.aspx" />
+    <Content Include="GUI\HistoryBook.aspx" />
     <Content Include="GUI\LoginGUI.aspx" />
     <Content Include="GUI\LogoutGUI.aspx" />
     <Content Include="Images\bg-fb.jpg" />
@@ -104,12 +106,26 @@
     <Compile Include="GUI\DangkyGUI.aspx.designer.cs">
       <DependentUpon>DangkyGUI.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\deletebook.aspx.cs">
+      <DependentUpon>deletebook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\deletebook.aspx.designer.cs">
+      <DependentUpon>deletebook.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\FeedbackGUI.aspx.cs">
       <DependentUpon>FeedbackGUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI\FeedbackGUI.aspx.designer.cs">
       <DependentUpon>FeedbackGUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\HistoryBook.aspx.cs">
+      <DependentUpon>HistoryBook.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\HistoryBook.aspx.designer.cs">
+      <DependentUpon>HistoryBook.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\LoginGUI.aspx.cs">
       <DependentUpon>LoginGUI.aspx</DependentUpon>

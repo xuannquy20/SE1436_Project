@@ -20,16 +20,7 @@
         <asp:Panel ID="Panel1" runat="server" CssClass="box-fb">
             <asp:Label ID="Label1" runat="server" Text="3 bình luận gần nhất" Font-Bold="True"></asp:Label>
             <br />
-            <asp:GridView ID="GridView1" runat="server" BorderStyle="None" CellPadding="4" CellSpacing="10" EnableModelValidation="True" ForeColor="#333333" GridLines="Horizontal" OnDataBound="GridView1_DataBound" ShowHeader="False" Width="503px">
-                <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
-                <EditRowStyle BackColor="#999999" />
-                <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
-                <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
-                <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
-            </asp:GridView>
-            <a href="AllFeedback.aspx">Xem tất cả bình luận>>></a>
+            <br />
         </asp:Panel>
         
     </div>

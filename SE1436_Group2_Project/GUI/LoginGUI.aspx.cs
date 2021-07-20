@@ -38,6 +38,7 @@ namespace SE1436_Group2_Project.GUI
                     Commented = int.Parse(dr["commented"].ToString())
                 };
                 Session["user"] = u.Username;
+                Session["name"] = u.Name;
                 Session["role"] = u.Role;
                 Session["comment"] = u.CanComment;
                 Session["commented"] = u.Commented;
@@ -45,6 +46,8 @@ namespace SE1436_Group2_Project.GUI
                 {
                     HttpCookie user = new HttpCookie("user");
                     user.Value = u.Username;
+                    HttpCookie name = new HttpCookie("name");
+                    name.Value = u.Name;
                     HttpCookie role = new HttpCookie("role");
                     role.Value = u.Role.ToString();
                     HttpCookie comment = new HttpCookie("comment");
@@ -52,10 +55,12 @@ namespace SE1436_Group2_Project.GUI
                     HttpCookie commented = new HttpCookie("commented");
                     commented.Value = u.Commented.ToString();
                     user.Expires = DateTime.Now.AddYears(10);
+                    name.Expires = DateTime.Now.AddYears(10);
                     role.Expires = DateTime.Now.AddYears(10);
                     comment.Expires = DateTime.Now.AddYears(10);
                     commented.Expires = DateTime.Now.AddYears(10);
                     Response.Cookies.Add(user);
+                    Response.Cookies.Add(name);
                     Response.Cookies.Add(role);
                     Response.Cookies.Add(comment);
                     Response.Cookies.Add(commented);
