@@ -31,17 +31,28 @@ namespace SE1436_Group2_Project.GUI
                 {
                     Username = dr["username"].ToString(),
                     Role = int.Parse(dr["isStaff"].ToString()),
-                    IsBooked = int.Parse(dr["isBooked"].ToString()),
                     Name = dr["name"].ToString(),
-                    Phone = dr["phone"].ToString(),
-                    CanComment = int.Parse(dr["canComment"].ToString()),
-                    Commented = int.Parse(dr["commented"].ToString())
+                    Phone = dr["phone"].ToString()
                 };
+                if(dr["feedback"].ToString().Equals("") || dr["feedback"].ToString() == null)
+                {
+                    u.Commented = 0;
+                }
+                else
+                {
+                    u.Commented = 1;
+                }
+                SqlCommand cmd = new SqlCommand("select username from listBook where username = @u");
+                cmd.Parameters.AddWithValue("@u", u.Username);
+                DataTable dt1 = DAO.GetDataTable(cmd);
+                if (dt1.Rows.Count > 0)
+                {
+                    Session["canComment"] = 1;
+                }
                 Session["user"] = u.Username;
                 Session["name"] = u.Name;
                 Session["role"] = u.Role;
-                Session["comment"] = u.CanComment;
-                Session["commented"] = u.Commented;
+                Session["comment"] = u.Commented;
                 if (CheckBox1.Checked)
                 {
                     HttpCookie user = new HttpCookie("user");
@@ -51,21 +62,22 @@ namespace SE1436_Group2_Project.GUI
                     HttpCookie role = new HttpCookie("role");
                     role.Value = u.Role.ToString();
                     HttpCookie comment = new HttpCookie("comment");
-                    comment.Value = u.CanComment.ToString();
-                    HttpCookie commented = new HttpCookie("commented");
-                    commented.Value = u.Commented.ToString();
+                    comment.Value = u.Commented.ToString();
+                    HttpCookie canComment = new HttpCookie("canComment");
+                    canComment.Value = Session["canComment"].ToString();
                     user.Expires = DateTime.Now.AddYears(10);
                     name.Expires = DateTime.Now.AddYears(10);
                     role.Expires = DateTime.Now.AddYears(10);
                     comment.Expires = DateTime.Now.AddYears(10);
-                    commented.Expires = DateTime.Now.AddYears(10);
+                    canComment.Expires = DateTime.Now.AddYears(10);
                     Response.Cookies.Add(user);
                     Response.Cookies.Add(name);
                     Response.Cookies.Add(role);
                     Response.Cookies.Add(comment);
-                    Response.Cookies.Add(commented);
+                    Response.Cookies.Add(canComment);
                 }
-                Response.Redirect("Trangchu.aspx");
+                
+                    Response.Redirect("Trangchu.aspx");
             }
             else
             {

@@ -13,7 +13,7 @@ namespace SE1436_Group2_Project.GUI
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string sql = "select a.name, liked, content from feedback f join Account a on f.username = a.username order by f.id";
+            string sql = "select name, liked, feedback from Account where feedback != 'null'";
             DataTable d = DAO.GetDataTable(sql);
             foreach (DataRow r in d.Rows)
             {
@@ -21,7 +21,7 @@ namespace SE1436_Group2_Project.GUI
                 Image i = new Image();
                 Label content = new Label();
                 user.Text = r["name"].ToString() + "<br/>";
-                if (r["liked"].ToString() == "LIKE")
+                if (r["liked"].ToString() == "1")
                 {
                     i.ImageUrl = "../Images/like.png";
                 }
@@ -29,7 +29,7 @@ namespace SE1436_Group2_Project.GUI
                 {
                     i.ImageUrl = "../Images/dislike.png";
                 }
-                content.Text = "<br/>" + r["content"].ToString() + "<br/>" + "________________________________________________________________" + "<br/>";
+                content.Text = "<br/>" + r["feedback"].ToString() + "<br/>" + "________________________________________________________________" + "<br/>";
                 user.Font.Bold = true;
                 i.Width = 20;
                 Panel1.Controls.Add(user);

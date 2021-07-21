@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="bg-fb">
     <div class="div-feed">
-        <%if (Convert.ToInt32(Session["comment"]) == 1)
+        <%if (Convert.ToInt32(Session["canComment"]) == 1)
             { %>
         <div>
             <asp:ImageButton ID="ImageButton1" runat="server" Height="44px" CssClass="star-l" ImageUrl="~/Images/like.png" Width="46px" OnClick="ImageButton1_Click" CausesValidation="False" />
