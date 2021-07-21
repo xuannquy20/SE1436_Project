@@ -49,6 +49,10 @@ namespace SE1436_Group2_Project.GUI
                 {
                     Session["canComment"] = 1;
                 }
+                else
+                {
+                    Session["canComment"] = 0;
+                }
                 Session["user"] = u.Username;
                 Session["name"] = u.Name;
                 Session["role"] = u.Role;

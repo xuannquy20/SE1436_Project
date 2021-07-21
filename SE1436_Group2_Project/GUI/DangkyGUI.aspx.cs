@@ -30,7 +30,7 @@ namespace SE1436_Group2_Project.GUI
             }
             else
             {
-                SqlCommand cmd = new SqlCommand("INSERT INTO [csProject].[dbo].[Account] VALUES (@u ,@p , 0, 0, @n, @sdt, 0)");
+                SqlCommand cmd = new SqlCommand("INSERT INTO [csProject].[dbo].[Account] ([username],[password],[isStaff],[name],[phone],[liked])  VALUES (@u ,@p , 0, @n, @sdt,0)");
                 cmd.Parameters.AddWithValue("@u",txtUsername.Text);
                 cmd.Parameters.AddWithValue("@p", txtPassword.Text);
                 cmd.Parameters.AddWithValue("@n", txtName.Text);

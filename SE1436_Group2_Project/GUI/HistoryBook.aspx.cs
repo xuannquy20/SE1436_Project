@@ -38,7 +38,7 @@ namespace SE1436_Group2_Project.GUI
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             e.Row.Cells[0].ForeColor = System.Drawing.Color.Red;
-            if (e.Row.RowType == DataControlRowType.Header && DropDownList1.SelectedValue != "3")
+            if (e.Row.RowType == DataControlRowType.Header && DropDownList1.SelectedValue.ToString() != "2")
             {
                 TableCellCollection obj = ((System.Web.UI.WebControls.TableRow)(e.Row)).Cells;
                 TableCell cell = new TableCell();
@@ -47,7 +47,7 @@ namespace SE1436_Group2_Project.GUI
                 cell.Controls.Add(lbl);
                 obj.Add(cell);
             }
-            if (e.Row.RowType == DataControlRowType.DataRow && DropDownList1.SelectedValue == "1")
+            if (e.Row.RowType == DataControlRowType.DataRow && DropDownList1.SelectedValue == "0")
             {
                 TableCellCollection obj = ((System.Web.UI.WebControls.TableRow)(e.Row)).Cells;
                 TableCell cell = new TableCell();
@@ -57,7 +57,7 @@ namespace SE1436_Group2_Project.GUI
                 cell.Controls.Add(hyl);
                 obj.Add(cell);
             }
-            if (e.Row.RowType == DataControlRowType.DataRow && DropDownList1.SelectedValue == "2")
+            if (e.Row.RowType == DataControlRowType.DataRow && DropDownList1.SelectedValue == "1")
             {
                 TableCellCollection obj = ((System.Web.UI.WebControls.TableRow)(e.Row)).Cells;
                 TableCell cell = new TableCell();

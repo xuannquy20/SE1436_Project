@@ -64,6 +64,7 @@
     <Content Include="GUI\deletebook.aspx" />
     <Content Include="GUI\FeedbackGUI.aspx" />
     <Content Include="GUI\HistoryBook.aspx" />
+    <Content Include="GUI\ListroomGUI.aspx" />
     <Content Include="GUI\LoginGUI.aspx" />
     <Content Include="GUI\LogoutGUI.aspx" />
     <Content Include="Images\bg-fb.jpg" />
@@ -134,6 +135,13 @@
     </Compile>
     <Compile Include="GUI\HistoryBook.aspx.designer.cs">
       <DependentUpon>HistoryBook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ListroomGUI.aspx.cs">
+      <DependentUpon>ListroomGUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\ListroomGUI.aspx.designer.cs">
+      <DependentUpon>ListroomGUI.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\LoginGUI.aspx.cs">
       <DependentUpon>LoginGUI.aspx</DependentUpon>

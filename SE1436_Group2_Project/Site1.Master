@@ -36,7 +36,7 @@
                     <% if (Convert.ToInt32(Session["role"]) == 0 && (String)Session["user"]!=null) {%>
                         <li class="nav-item" role="presentation"><a class="nav-link active" href="HistoryBook.aspx" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Lịch sử đặt phòng</a></li>
                     <%} else if (Convert.ToInt32(Session["role"]) == 1) {%>
-                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách các phòng</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="ListroomGUI.aspx" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách các phòng</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách yêu cầu</a></li>
                      <%}%>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="FeedbackGUI.aspx" style="color: #ffffff;font-family: 'Roboto Slab', serif;">Đánh giá</a></li>
