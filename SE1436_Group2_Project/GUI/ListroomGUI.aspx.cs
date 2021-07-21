@@ -52,5 +52,10 @@ namespace SE1436_Group2_Project.GUI
                 Button1.Visible = false;
             }
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -83,7 +83,20 @@
         </div>
     </footer>
 <style type="text/css">
-    
+body{ height:100vh; margin:0; }
+
+header{ min-height:50px;}
+
+/* Trick */
+body{ 
+  display:flex; 
+  flex-direction:column; 
+  background-color: antiquewhite;
+}
+
+footer{
+  margin-top:auto; 
+}
     .navigation-clean-button {
   background: #222222;
   padding-top: 10px;
@@ -297,7 +310,6 @@ p.navbar-text.navbar-right.actions {
 }
 
 .bg-fb{
-    background-color: antiquewhite;
     width: 100%;
     height: auto;
 }
