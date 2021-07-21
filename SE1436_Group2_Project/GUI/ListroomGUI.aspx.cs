@@ -40,5 +40,17 @@ namespace SE1436_Group2_Project.GUI
                 e.Row.Cells[2].Text = "VIP";
             }
         }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(DropDownList1.SelectedValue == "0")
+            {
+                Button1.Visible = true;
+            }
+            else
+            {
+                Button1.Visible = false;
+            }
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Globalization;
 
 namespace SE1436_Group2_Project.GUI
 {
@@ -38,6 +39,11 @@ namespace SE1436_Group2_Project.GUI
         protected void GridView1_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             e.Row.Cells[0].ForeColor = System.Drawing.Color.Red;
+            if (e.Row.RowType == DataControlRowType.DataRow) 
+            {
+                e.Row.Cells[3].Text = DateTime.Parse(e.Row.Cells[3].Text).ToShortDateString();
+                e.Row.Cells[4].Text = DateTime.Parse(e.Row.Cells[4].Text).ToShortDateString();
+            }
             if (e.Row.RowType == DataControlRowType.Header && DropDownList1.SelectedValue.ToString() != "2")
             {
                 TableCellCollection obj = ((System.Web.UI.WebControls.TableRow)(e.Row)).Cells;
@@ -84,6 +90,12 @@ namespace SE1436_Group2_Project.GUI
 
         protected void GridView1_DataBound(object sender, EventArgs e)
         {
+        }
+
+        protected void GridView1_DataBound1(object sender, EventArgs e)
+        {
+
+            
         }
     }
 }
