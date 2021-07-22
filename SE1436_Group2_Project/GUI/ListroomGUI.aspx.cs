@@ -100,7 +100,7 @@ namespace SE1436_Group2_Project.GUI
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Response.Redirect("");
+            Response.Redirect("Dangkiphongoffline.aspx");
         }
     }
 }

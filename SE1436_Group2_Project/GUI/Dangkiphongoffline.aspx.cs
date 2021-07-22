@@ -101,5 +101,10 @@ namespace SE1436_Group2_Project.GUI
             
             getFloor();
         }
+
+        protected void human_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
