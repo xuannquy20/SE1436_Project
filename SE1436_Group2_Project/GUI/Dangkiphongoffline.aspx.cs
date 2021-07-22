@@ -64,8 +64,8 @@ namespace SE1436_Group2_Project.GUI
         {
             String dateIn = checkIn.SelectedDate.ToString();
             String dateOut = checkOut.SelectedDate.ToString();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[bookOff]([name],[sdt],[room],[datebook],[dateend],[people])"
-                        +"VALUES(@name, @phone, @room, @dateIn , @dateOut, @people)");
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[bookOff]([name],[sdt],[room],[datebook],[dateend],[people],[status])"
+                        +"VALUES(@name, @phone, @room, @dateIn , @dateOut, @people , 1)");
             cmd.Parameters.AddWithValue("@name",name.Text);
             cmd.Parameters.AddWithValue("@phone", phonenumber.Text);
             cmd.Parameters.AddWithValue("@dateIn", dateIn);
