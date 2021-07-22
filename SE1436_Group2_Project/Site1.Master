@@ -27,9 +27,9 @@
                         {%>
                     <li class="nav-item dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#" style="font-family: 'Roboto Slab', serif;color: #ffffff;">Hạng phòng</a>
                         <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item room" role="presentation" href="DatPhongGUI.aspx?hang=1">Giường đơn(500.000đ/ngày)</a>
-                            <a class="dropdown-item room" role="presentation" href="DatPhongGUI.aspx?hang=2">Giường đôi(800.000đ/ngày)</a>
-                            <a class="dropdown-item room" role="presentation" href="DatPhongGUI.aspx?hang=3">Phòng VIP(1.000.000đ/ngày)</a>
+                            <a class="dropdown-item room" role="presentation" href="Dangkiphong.aspx?hang=1">Giường đơn(500.000đ/ngày)</a>
+                            <a class="dropdown-item room" role="presentation" href="Dangkiphong.aspx?hang=2">Giường đôi(800.000đ/ngày)</a>
+                            <a class="dropdown-item room" role="presentation" href="Dangkiphong.aspx?hang=3">Phòng VIP(1.000.000đ/ngày)</a>
                         </div>
                     </li>
                     <%} %>

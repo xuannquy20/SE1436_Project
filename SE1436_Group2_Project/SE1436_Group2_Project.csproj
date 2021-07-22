@@ -60,7 +60,10 @@
     <Content Include="assets\fonts\FontAwesome.otf" />
     <Content Include="GUI\AllFeedback.aspx" />
     <Content Include="GUI\checkoutbook.aspx" />
+    <Content Include="GUI\Dangkiphongoffline.aspx" />
+    <Content Include="GUI\Dangkiphong.aspx" />
     <Content Include="GUI\DangkyGUI.aspx" />
+    <Content Include="GUI\Datphongthanhcong.aspx" />
     <Content Include="GUI\deletebook.aspx" />
     <Content Include="GUI\FeedbackGUI.aspx" />
     <Content Include="GUI\HistoryBook.aspx" />
@@ -75,6 +78,9 @@
     <Content Include="Images\main.jpg" />
     <Content Include="Images\main1.jpg" />
     <Content Include="Images\login.jpg" />
+    <Content Include="Images\room1.png" />
+    <Content Include="Images\room2.png" />
+    <Content Include="Images\room3.png" />
     <Content Include="Images\vote.png" />
     <Content Include="Site1.Master" />
     <None Include="Web.Debug.config">
@@ -108,12 +114,33 @@
     <Compile Include="GUI\checkoutbook.aspx.designer.cs">
       <DependentUpon>checkoutbook.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Dangkiphongoffline.aspx.cs">
+      <DependentUpon>Dangkiphongoffline.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Dangkiphongoffline.aspx.designer.cs">
+      <DependentUpon>Dangkiphongoffline.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Dangkiphong.aspx.cs">
+      <DependentUpon>Dangkiphong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Dangkiphong.aspx.designer.cs">
+      <DependentUpon>Dangkiphong.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DangkyGUI.aspx.cs">
       <DependentUpon>DangkyGUI.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI\DangkyGUI.aspx.designer.cs">
       <DependentUpon>DangkyGUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Datphongthanhcong.aspx.cs">
+      <DependentUpon>Datphongthanhcong.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Datphongthanhcong.aspx.designer.cs">
+      <DependentUpon>Datphongthanhcong.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\deletebook.aspx.cs">
       <DependentUpon>deletebook.aspx</DependentUpon>
