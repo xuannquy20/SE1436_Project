@@ -37,7 +37,7 @@
                         <li class="nav-item" role="presentation"><a class="nav-link active" href="HistoryBook.aspx" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Lịch sử đặt phòng</a></li>
                     <%} else if (Convert.ToInt32(Session["role"]) == 1) {%>
                         <li class="nav-item" role="presentation"><a class="nav-link active" href="ListroomGUI.aspx" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách các phòng</a></li>
-                        <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Danh sách yêu cầu</a></li>
+                        <li class="nav-item" role="presentation"><a class="nav-link active" href="Checkout.aspx" style="color: #fafafa;font-family: 'Roboto Slab', serif;">Yêu cầu checkout</a></li>
                      <%}%>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="FeedbackGUI.aspx" style="color: #ffffff;font-family: 'Roboto Slab', serif;">Đánh giá</a></li>
                 </ul>
@@ -83,6 +83,13 @@
         </div>
     </footer>
 <style type="text/css">
+    .bt-mgl{
+        margin: 5px 0px;
+        margin-left: 15px;
+    }
+    .ce{
+        margin: 0 auto;
+    }
 body{ height:100vh; margin:0; }
 
 header{ min-height:50px;}
@@ -306,11 +313,6 @@ p.navbar-text.navbar-right.actions {
 .mg-bt{
     display: flex;
     margin-left: 248px;
-}
-
-.bg-fb{
-    width: 100%;
-    height: auto;
 }
 
 .abc{

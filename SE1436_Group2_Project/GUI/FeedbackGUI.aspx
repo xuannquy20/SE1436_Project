@@ -2,7 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="bg-fb">
     <div class="div-feed">
         <%if (Convert.ToInt32(Session["canComment"]) == 1)
             { %>
@@ -22,7 +21,5 @@
             <br />
             <br />
         </asp:Panel>
-        
     </div>
-</div>
 </asp:Content>

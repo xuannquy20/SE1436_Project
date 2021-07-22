@@ -75,15 +75,6 @@ namespace SE1436_Group2_Project.GUI
             }
         }
 
-        private void Hyl_Click(object sender, EventArgs e)
-        {
-            string someString = ((Button)sender).Text.Substring(7);
-            SqlCommand sql = new SqlCommand("DELETE FROM [csProject].[dbo].[listBook] WHERE id = @i");
-            sql.Parameters.AddWithValue("@i", int.Parse(someString));
-            DAO.UpdateTable(sql);
-            Response.Redirect("HistoryBook.aspx");
-        }
-
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
