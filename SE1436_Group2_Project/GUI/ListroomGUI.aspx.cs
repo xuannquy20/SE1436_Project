@@ -55,7 +55,7 @@ namespace SE1436_Group2_Project.GUI
                 e.Row.Cells[4].Text = DateTime.Parse(e.Row.Cells[4].Text).ToShortDateString();
                 e.Row.Cells[5].Text = DateTime.Parse(e.Row.Cells[5].Text).ToShortDateString();
             }
-            if (e.Row.RowType == DataControlRowType.Header && DropDownList1.SelectedValue.ToString() == "1")
+            if (e.Row.RowType == DataControlRowType.Header && DropDownList1.SelectedValue.ToString() != "0")
             {
                 TableCellCollection obj = ((System.Web.UI.WebControls.TableRow)(e.Row)).Cells;
                 TableCell cell = new TableCell();
@@ -71,6 +71,16 @@ namespace SE1436_Group2_Project.GUI
                 HyperLink hyl = new HyperLink();
                 hyl.Text = "Check in";
                 hyl.NavigateUrl = "checkinroom.aspx?id=" + e.Row.Cells[0].Text+"&room="+e.Row.Cells[1].Text;
+                cell.Controls.Add(hyl);
+                obj.Add(cell);
+            }
+            if (e.Row.RowType == DataControlRowType.DataRow && DropDownList1.SelectedValue == "2")
+            {
+                TableCellCollection obj = ((System.Web.UI.WebControls.TableRow)(e.Row)).Cells;
+                TableCell cell = new TableCell();
+                HyperLink hyl = new HyperLink();
+                hyl.Text = "Check out";
+                hyl.NavigateUrl = "checkoutroom.aspx?id=" + e.Row.Cells[0].Text + "&room=" + e.Row.Cells[1].Text;
                 cell.Controls.Add(hyl);
                 obj.Add(cell);
             }
