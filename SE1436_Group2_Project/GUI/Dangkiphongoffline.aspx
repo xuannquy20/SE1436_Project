@@ -76,6 +76,7 @@
                         <asp:Label ID="Label2" runat="server" Text="Check Out"></asp:Label>
                         <asp:Calendar ID="checkOut" runat="server"></asp:Calendar>
                     </td>
+                    <asp:Label ID="Label6" runat="server" Text="Label"></asp:Label>
                     <td class="auto-style21">
                         <div class="box-dangki">
                             <br />
@@ -98,10 +99,21 @@
                                     <td class="auto-style17"></td>
                                     <td class="auto-style17">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="human" ErrorMessage="Hãy điền vào mục này!"></asp:RequiredFieldValidator>
-                                        <asp:TextBox CssClass="form-control" ID="human" runat="server" Width="272px" placeholder="Số lượng người" Height="28px"></asp:TextBox></td>
+                                        <asp:TextBox CssClass="form-control" ID="human" runat="server" Width="272px" placeholder="Số lượng người" Height="28px" Style="margin-bottom:10px"></asp:TextBox></td>
                                 </tr>
                                 <tr>
-                                    <td class="auto-style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <td>
+                                        &nbsp;&nbsp;
+                                        <asp:Label ID="Label5" runat="server" Text="Loại Phòng:"></asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:DropDownList ID="Type" runat="server" Width="355px" AutoPostBack="True" OnSelectedIndexChanged="Type_SelectedIndexChanged">
+                                        </asp:DropDownList>
+                                    </td>
+                                    
+                                </tr>
+                                <tr>
+                                    <td class="auto-style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         <asp:Label ID="Label3" runat="server" Text="Tầng:"></asp:Label></td>
                                     <td class="auto-style15">
                                         <asp:DropDownList CssClass="form-control" ID="floor" runat="server" Width="356px" AutoPostBack="True" OnSelectedIndexChanged="floor_SelectedIndexChanged"></asp:DropDownList></td>
@@ -117,6 +129,7 @@
                             <br />
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:Button ID="Button1" runat="server" Text="Chốt Đơn" Width="160px" OnClick="Button1_Click" />
+                            
                             <br />
                         </div>
                     </td>
