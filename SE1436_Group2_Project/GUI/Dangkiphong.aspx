@@ -64,6 +64,8 @@
     <div class="auto-style18">       
             <table class="auto-style8">
                 <tr>
+                    <% if (Session["user"] != null)
+                        { %>
                     <td class="auto-style9">
                        
                                
@@ -113,9 +115,16 @@
                             <br />
                         </div>
                     </td>
+                    <%} %>
                     <td class="auto-style20">
                         <asp:Image ID="Image1" runat="server" />                   
                     </td>
+                    <%if (Session["user"] == null)
+                        {%>
+                    <td>
+                        Phòng Deluxe được thiết kế tinh tế sang trọng nội thất đầy đủ tiện nghi hiện đại, cửa sổ kính rộng thoáng bao quát toàn cảnh thành phố mang đến cho bạn một không gian thanh bình và dễ chịu sẽ là sự lựa chọn cho những doanh nhân và khách du lịch.
+                    </td>
+                    <%} %>
                 </tr>
             </table>
     </div>
