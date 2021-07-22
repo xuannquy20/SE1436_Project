@@ -7,11 +7,12 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace SE1436_Group2_Project.GUI {
-    
-    
-    public partial class checkoutroom {
-        
+
+namespace SE1436_Group2_Project.GUI
+{
+    public partial class checkoutroomoff
+    {
+
         /// <summary>
         /// form1 control.
         /// </summary>

@@ -18,8 +18,8 @@ namespace SE1436_Group2_Project.GUI
             SqlCommand udroom = new SqlCommand("UPDATE [csProject].[dbo].[room] SET [status] = 0 WHERE room = @r");
             udroom.Parameters.AddWithValue("@r", int.Parse(room));
             DAO.UpdateTable(udroom);
-            SqlCommand udlb = new SqlCommand("UPDATE [csProject].[dbo].[listBook] SET [status] = 2 WHERE id = @1");
-            udlb.Parameters.AddWithValue("@r", int.Parse(id));
+            SqlCommand udlb = new SqlCommand("UPDATE [csProject].[dbo].[listBook] SET [status] = 2 WHERE id = @i");
+            udlb.Parameters.AddWithValue("@i", int.Parse(id));
             DAO.UpdateTable(udlb);
             SqlCommand isrequest = new SqlCommand("Insert into requestCheckout values (@i, 0)");
             isrequest.Parameters.AddWithValue("@i", int.Parse(id));

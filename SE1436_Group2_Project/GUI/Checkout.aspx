@@ -8,7 +8,7 @@
                 </asp:DropDownList>
 
                 <br />
-                <asp:GridView ID="GridView1" runat="server" Width="505px" CssClass="table table-hover" >
+                <asp:GridView ID="GridView1" runat="server" Width="505px" CssClass="table table-hover" OnRowDataBound="GridView1_RowDataBound" >
                 </asp:GridView>
 
             </asp:Panel>

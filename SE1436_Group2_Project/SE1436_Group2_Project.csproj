@@ -62,6 +62,8 @@
     <Content Include="GUI\checkinroom.aspx" />
     <Content Include="GUI\Checkout.aspx" />
     <Content Include="GUI\checkoutbook.aspx" />
+    <Content Include="GUI\checkoutroom.aspx" />
+    <Content Include="GUI\checkoutroomoff.aspx" />
     <Content Include="GUI\Dangkiphongoffline.aspx" />
     <Content Include="GUI\Dangkiphong.aspx" />
     <Content Include="GUI\DangkyGUI.aspx" />
@@ -129,6 +131,20 @@
     </Compile>
     <Compile Include="GUI\checkoutbook.aspx.designer.cs">
       <DependentUpon>checkoutbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\checkoutroom.aspx.cs">
+      <DependentUpon>checkoutroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\checkoutroom.aspx.designer.cs">
+      <DependentUpon>checkoutroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\checkoutroomoff.aspx.cs">
+      <DependentUpon>checkoutroomoff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\checkoutroomoff.aspx.designer.cs">
+      <DependentUpon>checkoutroomoff.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Dangkiphongoffline.aspx.cs">
       <DependentUpon>Dangkiphongoffline.aspx</DependentUpon>
