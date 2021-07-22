@@ -59,7 +59,10 @@
     <Content Include="assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="assets\fonts\FontAwesome.otf" />
     <Content Include="GUI\AllFeedback.aspx" />
+    <Content Include="GUI\checkinroom.aspx" />
+    <Content Include="GUI\Checkout.aspx" />
     <Content Include="GUI\checkoutbook.aspx" />
+    <Content Include="GUI\checkoutroom.aspx" />
     <Content Include="GUI\DangkyGUI.aspx" />
     <Content Include="GUI\deletebook.aspx" />
     <Content Include="GUI\FeedbackGUI.aspx" />
@@ -101,12 +104,33 @@
     <Compile Include="GUI\AllFeedback.aspx.designer.cs">
       <DependentUpon>AllFeedback.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI\checkinroom.aspx.cs">
+      <DependentUpon>checkinroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\checkinroom.aspx.designer.cs">
+      <DependentUpon>checkinroom.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI\checkoutbook.aspx.cs">
       <DependentUpon>checkoutbook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI\checkoutbook.aspx.designer.cs">
       <DependentUpon>checkoutbook.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\checkoutroom.aspx.cs">
+      <DependentUpon>checkoutroom.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI\checkoutroom.aspx.designer.cs">
+      <DependentUpon>checkoutroom.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\DangkyGUI.aspx.cs">
       <DependentUpon>DangkyGUI.aspx</DependentUpon>
