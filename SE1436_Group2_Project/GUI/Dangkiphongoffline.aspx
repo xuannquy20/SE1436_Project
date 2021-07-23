@@ -103,17 +103,17 @@
                             <table class="auto-style16">
                                 <tr>
                                     <td></td>
-                                    <td><asp:TextBox ID="name" runat="server"  CssClass="auto-style22"  placeholder="Tên người đặt" Style="margin-bottom:10px" Width="337px"></asp:TextBox></br></td>
+                                    <td><asp:TextBox ID="name" runat="server"  CssClass="auto-style22 form-control"  placeholder="Tên người đặt" Style="margin-bottom:10px" Width="356px"></asp:TextBox></br></td>
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td><asp:TextBox ID="phonenumber" runat="server" CssClass="auto-style22"  placeholder="Số điện thoại" Width="317px"></asp:TextBox></td>
+                                    <td><asp:TextBox ID="phonenumber" runat="server" CssClass="auto-style22 form-control"  placeholder="Số điện thoại" Width="356px"></asp:TextBox></td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style17"></td>
                                     <td class="auto-style17">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="human" ErrorMessage="Hãy điền vào mục này!"></asp:RequiredFieldValidator>
-                                        <asp:TextBox CssClass="form-control" ID="human" runat="server" Width="272px" placeholder="Số lượng người" Height="28px" Style="margin-bottom:10px" OnTextChanged="human_TextChanged"></asp:TextBox></td>
+                                        <asp:TextBox CssClass="form-control" ID="human" runat="server" Width="356px" placeholder="Số lượng người" Height="28px" Style="margin-bottom:10px" OnTextChanged="human_TextChanged"></asp:TextBox></td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -121,7 +121,7 @@
                                         <asp:Label ID="Label5" runat="server" Text="Loại Phòng:"></asp:Label>
                                     </td>
                                     <td>
-                                        <asp:DropDownList ID="Type" runat="server" Width="355px"  CssClass="form-control"  AutoPostBack="True" OnSelectedIndexChanged="Type_SelectedIndexChanged">
+                                        <asp:DropDownList ID="Type" runat="server" Width="356px"  CssClass="form-control"  AutoPostBack="True" OnSelectedIndexChanged="Type_SelectedIndexChanged">
                                         </asp:DropDownList>
                                     </td>
                                     
