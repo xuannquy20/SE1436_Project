@@ -38,7 +38,10 @@
         }
 
         .bt-l{
-            margin-left: 100px;
+            display: flex;
+            padding: auto;
+
+            margin: 0 auto;
             opacity: 100%;
         }
 
@@ -79,7 +82,7 @@
             <asp:TextBox ID="txtSdt" runat="server" Width="300px" CssClass="mid form-control" Height="51px" placeholder="Nhập số điện thoại"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="txtSdt" ErrorMessage="Không được bỏ trống số điện thoại" CssClass="check"></asp:RequiredFieldValidator>
             <br />
-            <asp:Button ID="Button1" runat="server" Text="Đăng ký" Width="130px" CssClass="bt-l btn btn-success" OnClick="Button1_Click"/>
+            <asp:Button ID="Button1" runat="server" Text="Đăng ký" Width="90px" CssClass="bt-l btn btn-success" OnClick="Button1_Click"/>
         </div>
     </form>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
