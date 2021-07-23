@@ -33,6 +33,8 @@ namespace SE1436_Group2_Project.GUI
                 {
                     Image1.ImageUrl = "/Images/room3.png";
                 }
+                checkIn.SelectedDate = DateTime.Today;
+                checkOut.SelectedDate = DateTime.Today.AddDays(1);
             }
         }
 
