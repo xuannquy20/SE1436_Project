@@ -82,6 +82,7 @@
     <Content Include="Images\main.jpg" />
     <Content Include="Images\main1.jpg" />
     <Content Include="Images\login.jpg" />
+    <Content Include="GUI\NOGUI\room1.png" />
     <Content Include="Images\room1.png" />
     <Content Include="Images\room2.png" />
     <Content Include="Images\room3.png" />

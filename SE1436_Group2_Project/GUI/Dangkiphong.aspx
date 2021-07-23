@@ -57,7 +57,7 @@
         }
         .anh{
             display: flex;
-            width:62%;
+            width:75%;
             height: auto;
             margin-bottom: 10px;
             margin: 0px auto;
