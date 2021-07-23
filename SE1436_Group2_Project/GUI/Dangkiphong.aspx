@@ -45,7 +45,7 @@
         height: 61px;
     }
         .auto-style18 {
-            background-color: antiquewhite;
+            background-color: white;
             width: 42%;
             height: 700px;
         }
@@ -112,7 +112,7 @@
                                     <td class="auto-style17"></td>
                                     <td class="auto-style17">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="human" ErrorMessage="Hãy điền vào mục này!"></asp:RequiredFieldValidator>
-                                        <asp:TextBox CssClass="auto-style22" ID="human" runat="server" Width="272px" placeholder="Số lượng người" Height="37px"></asp:TextBox></td>
+                                        <asp:TextBox CssClass="auto-style22 form-control" ID="human" runat="server" Width="356px" placeholder="Số lượng người" Height="37px"></asp:TextBox></td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="Label3" runat="server" Text="Tầng:"></asp:Label></td>
@@ -120,11 +120,11 @@
                                 </tr>
                                 <tr>
                                     <td class="auto-style13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="Label4" runat="server" Text="Phòng:"></asp:Label></td>
-                                    <td><asp:DropDownList CssClass="form-control" ID="room" runat="server" Width="354px" ></asp:DropDownList></td>
+                                    <td><asp:DropDownList CssClass="form-control" ID="room" runat="server" Width="356px" ></asp:DropDownList></td>
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td><br /><asp:Button ID="Button1" runat="server" Text="Chốt Đơn" Width="160px" CssClass="btn btn-success" OnClick="Button1_Click" /></td>
+                                    <td><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Button ID="Button1" runat="server" Text="Chốt Đơn" Width="160px" CssClass="btn btn-success" OnClick="Button1_Click" /></td>
                                 </tr>
                             </table>
                             <br />
