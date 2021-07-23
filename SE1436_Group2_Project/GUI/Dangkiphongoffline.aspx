@@ -64,6 +64,18 @@
         #phonenumber{
             margin-left: 140px;
         }
+        .auto-style22 {
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-clip: padding-box;
+            border-radius: .25rem;
+            transition: none;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -71,9 +83,9 @@
             <table class="auto-style8">
                 <tr>
                     <td class="auto-style9">
-                        <asp:Label ID="Label1" runat="server" Text="Check In"></asp:Label>
+                        <asp:Label ID="Label1" runat="server" Text="Ngày bắt đầu ở"></asp:Label>
                         <asp:Calendar ID="checkIn" runat="server" CssClass="auto-style12" Height="256px"></asp:Calendar>
-                        <asp:Label ID="Label2" runat="server" Text="Check Out"></asp:Label>
+                        <asp:Label ID="Label2" runat="server" Text="Ngày trả phòng"></asp:Label>
                         <asp:Calendar ID="checkOut" runat="server"></asp:Calendar>
                     </td>
                     <td class="auto-style21">
@@ -81,18 +93,19 @@
                             <br />
                             <br />
                             <div class="title">
-                                <asp:Label ID="LabelBook" runat="server" Text="BOOKING ROOMS"></asp:Label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="LabelBook" runat="server" Text="Đặt phòng"></asp:Label>
                             </div>
                             <br />
                             <br />
                             <table class="auto-style16">
                                 <tr>
                                     <td></td>
-                                    <td><asp:TextBox ID="name" runat="server"  CssClass="form-control"  placeholder="Tên người đặt" Style="margin-bottom:10px"></asp:TextBox></br></td>
+                                    <td><asp:TextBox ID="name" runat="server"  CssClass="auto-style22"  placeholder="Tên người đặt" Style="margin-bottom:10px" Width="337px"></asp:TextBox></br></td>
                                 </tr>
                                 <tr>
                                     <td></td>
-                                    <td><asp:TextBox ID="phonenumber" runat="server" CssClass="form-control"  placeholder="Số điện thoại"></asp:TextBox></td>
+                                    <td><asp:TextBox ID="phonenumber" runat="server" CssClass="auto-style22"  placeholder="Số điện thoại" Width="317px"></asp:TextBox></td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style17"></td>
@@ -133,8 +146,7 @@
                         </div>
                     </td>
                     <td class="auto-style20">
-                        <asp:Image ID="Image1" runat="server" />
-                    </td>
+                        &nbsp;</td>
                 </tr>
             </table>
     </div>

@@ -27,9 +27,6 @@
         .auto-style9 {
             width: 425px;
         }
-        .auto-style12 {
-            margin-top: 0px;
-        }
         .auto-style13 {
             width: 129px;
         }
@@ -58,46 +55,64 @@
         .auto-style21 {
             width: 227px;
         }
+        .anh{
+            display: flex;
+            width:62%;
+            height: auto;
+            margin-bottom: 10px;
+            margin: 0px auto;
+        }
+        .div-anh{
+            padding: 0px 10px;
+            background-color: white;
+        }
+        .auto-style22 {
+            display: block;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-clip: padding-box;
+            border-radius: .25rem;
+            transition: none;
+            border: 1px solid #ced4da;
+            background-color: #fff;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="auto-style18">       
             <table class="auto-style8">
                 <tr>
+                    <td class="auto-style9"> 
+                        <div class="div-anh">
+                        <asp:Image ID="Image1" runat="server" CssClass="anh img-thumbnail"/>
+                        <br />
+                        <div class="font-italic">Phòng Deluxe được thiết kế tinh tế sang trọng nội thất đầy đủ tiện nghi hiện đại, 
+                            cửa sổ kính rộng thoáng bao quát toàn cảnh thành phố mang đến cho bạn một không gian thanh bình 
+                            và dễ chịu sẽ là sự lựa chọn cho những doanh nhân và khách du lịch.
+                        </div>
+                        </div>
+                    </td>
                     <% if (Session["user"] != null)
                         { %>
-                    <td class="auto-style9">
-                       
-                               
-                                    <asp:Label ID="Label1" runat="server" Text="Check In"></asp:Label>
-                                    <asp:Calendar ID="checkIn" runat="server" CssClass="auto-style12" Height="256px"></asp:Calendar>
-                             
-                                
-                         
-                           
-                             
-                                    <asp:Label ID="Label2" runat="server" Text="Check Out"></asp:Label>
-                                    <asp:Calendar ID="checkOut" runat="server"></asp:Calendar>
-                          
-                        
-                      
-                    </td>
                     <td class="auto-style21">
-                        <div class="box-dangki">
+                        <div class="box-dangki" style="background-color: white;">
                             <br />
                             <br />
                             <div class="title">
-                                <asp:Label ID="LabelBook" runat="server" Text="BOOKING ROOMS"></asp:Label>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:Label ID="LabelBook" runat="server" Text="ĐẶT PHÒNG"></asp:Label>
                             </div>
                             <br />
-                            <br />                            
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <br />
+                            <br />
                             <table class="auto-style16">
                                 <tr> 
                                     <td class="auto-style17"></td>
                                     <td class="auto-style17">
                                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="human" ErrorMessage="Hãy điền vào mục này!"></asp:RequiredFieldValidator>
-                                        <asp:TextBox CssClass="form-control" ID="human" runat="server" Width="272px" placeholder="Số lượng người" Height="28px"></asp:TextBox></td>
+                                        <asp:TextBox CssClass="auto-style22" ID="human" runat="server" Width="272px" placeholder="Số lượng người" Height="37px"></asp:TextBox></td>
                                 </tr>
                                 <tr>
                                     <td class="auto-style14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="Label3" runat="server" Text="Tầng:"></asp:Label></td>
@@ -107,22 +122,19 @@
                                     <td class="auto-style13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <asp:Label ID="Label4" runat="server" Text="Phòng:"></asp:Label></td>
                                     <td><asp:DropDownList CssClass="form-control" ID="room" runat="server" Width="354px" ></asp:DropDownList></td>
                                 </tr>
+                                <tr>
+                                    <td></td>
+                                    <td><br /><asp:Button ID="Button1" runat="server" Text="Chốt Đơn" Width="160px" CssClass="btn btn-success" OnClick="Button1_Click" /></td>
+                                </tr>
                             </table>
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <br />
-                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Button ID="Button1" runat="server" Text="Chốt Đơn" Width="160px" OnClick="Button1_Click" />
                             <br />
                         </div>
                     </td>
-                    <%} %>
                     <td class="auto-style20">
-                        <asp:Image ID="Image1" runat="server" />                   
-                    </td>
-                    <%if (Session["user"] == null)
-                        {%>
-                    <td>
-                        Phòng Deluxe được thiết kế tinh tế sang trọng nội thất đầy đủ tiện nghi hiện đại, cửa sổ kính rộng thoáng bao quát toàn cảnh thành phố mang đến cho bạn một không gian thanh bình và dễ chịu sẽ là sự lựa chọn cho những doanh nhân và khách du lịch.
+                                    <asp:Label ID="Label5" runat="server" Text="Từ ngày" CssClass="font-weight-bold"></asp:Label>
+                                    <asp:Calendar ID="checkIn" runat="server" CssClass="table-hover" Height="256px" NextMonthText=""></asp:Calendar>
+                                    <asp:Label ID="Label2" runat="server" Text="Đến ngày" CssClass="font-weight-bold"></asp:Label>
+                                    <asp:Calendar ID="checkOut" runat="server" CssClass="table-hover"></asp:Calendar>
                     </td>
                     <%} %>
                 </tr>

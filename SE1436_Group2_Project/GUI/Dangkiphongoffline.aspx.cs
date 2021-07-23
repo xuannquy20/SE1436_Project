@@ -19,19 +19,6 @@ namespace SE1436_Group2_Project.GUI
                 Type.Items.Insert(0, new ListItem("Phòng giường đơn", "1"));
                 Type.Items.Insert(1, new ListItem("Phòng giường đôi", "2"));
                 Type.Items.Insert(2, new ListItem("Phòng vip", "3"));
-                String type = Type.SelectedValue;
-                if(type == "1")
-                {
-                    Image1.ImageUrl = "/Images/room1.png";
-                }
-                else if (type == "2")
-                {
-                    Image1.ImageUrl = "/Images/room2.png";
-                }
-                else if (type == "3")
-                {
-                    Image1.ImageUrl = "/Images/room3.png";
-                }
                 getFloor();
                 getRoom();
             }
