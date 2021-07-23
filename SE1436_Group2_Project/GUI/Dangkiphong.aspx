@@ -57,7 +57,7 @@
         }
         .anh{
             display: flex;
-            width:75%;
+            width:70%;
             height: auto;
             margin-bottom: 10px;
             margin: 0px auto;
@@ -88,14 +88,20 @@
             <table class="auto-style8">
                 <tr>
                     <td class="auto-style9"> 
+                         <% if (Session["user"] != null)
+                             { %>
                         <div class="div-anh">
+                            <%} %>
                         <asp:Image ID="Image1" runat="server" CssClass="anh img-thumbnail"/>
                         <br />
                         <div class="font-italic">Phòng Deluxe được thiết kế tinh tế sang trọng nội thất đầy đủ tiện nghi hiện đại, 
                             cửa sổ kính rộng thoáng bao quát toàn cảnh thành phố mang đến cho bạn một không gian thanh bình 
                             và dễ chịu sẽ là sự lựa chọn cho những doanh nhân và khách du lịch.
                         </div>
+                            <% if (Session["user"] != null)
+                                { %>
                         </div>
+                        <%} %>
                     </td>
                     <% if (Session["user"] != null)
                         { %>
