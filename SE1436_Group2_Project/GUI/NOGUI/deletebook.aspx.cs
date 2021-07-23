@@ -17,7 +17,7 @@ namespace SE1436_Group2_Project.GUI
             SqlCommand cmd = new SqlCommand("DELETE FROM [csProject].[dbo].[listBook] WHERE id = @i");
             cmd.Parameters.AddWithValue("@i", id);
             DAO.UpdateTable(cmd);
-            Response.Redirect("HistoryBook.aspx");
+            Response.Redirect("../HistoryBook.aspx");
         }
     }
 }

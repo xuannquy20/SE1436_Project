@@ -21,7 +21,7 @@ namespace SE1436_Group2_Project.GUI
             SqlCommand ud = new SqlCommand("UPDATE [csProject].[dbo].[listBook] SET [status] = 1 WHERE id = @i");
             ud.Parameters.AddWithValue("@i", id);
             DAO.UpdateTable(ud);
-            Response.Redirect("ListroomGUI.aspx");
+            Response.Redirect("../ListroomGUI.aspx");
         }
     }
 }

@@ -24,7 +24,7 @@ namespace SE1436_Group2_Project.GUI
 			SqlCommand cmd = new SqlCommand("UPDATE [csProject].[dbo].[requestCheckout] SET [status] = 1 WHERE idbook = @i");
 			cmd.Parameters.AddWithValue("@i", id);
 			DAO.UpdateTable(cmd);
-			Response.Redirect("Checkout.aspx");
+			Response.Redirect("../Checkout.aspx");
 		}
 	}
 }

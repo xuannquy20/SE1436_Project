@@ -59,7 +59,7 @@ namespace SE1436_Group2_Project.GUI
                 TableCell cell = new TableCell();
                 HyperLink hyl = new HyperLink();
                 hyl.Text = "Huỷ phòng";
-                hyl.NavigateUrl = "deletebook.aspx?id=" + e.Row.Cells[0].Text;
+                hyl.NavigateUrl = "NOGUI/deletebook.aspx?id=" + e.Row.Cells[0].Text;
                 cell.Controls.Add(hyl);
                 obj.Add(cell);
             }
@@ -69,7 +69,7 @@ namespace SE1436_Group2_Project.GUI
                 TableCell cell = new TableCell();
                 HyperLink hyl = new HyperLink();
                 hyl.Text = "Check out";
-                hyl.NavigateUrl = "checkoutbook.aspx?id=" + e.Row.Cells[0].Text + "&room=" + e.Row.Cells[1].Text;
+                hyl.NavigateUrl = "NOGUI/checkoutbook.aspx?id=" + e.Row.Cells[0].Text + "&room=" + e.Row.Cells[1].Text;
                 cell.Controls.Add(hyl);
                 obj.Add(cell);
             }

@@ -70,7 +70,7 @@ namespace SE1436_Group2_Project.GUI
                 TableCell cell = new TableCell();
                 HyperLink hyl = new HyperLink();
                 hyl.Text = "Check in";
-                hyl.NavigateUrl = "checkinroom.aspx?id=" + e.Row.Cells[0].Text+"&room="+e.Row.Cells[1].Text;
+                hyl.NavigateUrl = "NOGUI/checkinroom.aspx?id=" + e.Row.Cells[0].Text+"&room="+e.Row.Cells[1].Text;
                 cell.Controls.Add(hyl);
                 obj.Add(cell);
             }
@@ -80,7 +80,7 @@ namespace SE1436_Group2_Project.GUI
                 TableCell cell = new TableCell();
                 HyperLink hyl = new HyperLink();
                 hyl.Text = "Check out";
-                hyl.NavigateUrl = "checkoutroom.aspx?id=" + e.Row.Cells[0].Text + "&room=" + e.Row.Cells[1].Text;
+                hyl.NavigateUrl = "NOGUI/checkoutroom.aspx?id=" + e.Row.Cells[0].Text + "&room=" + e.Row.Cells[1].Text;
                 cell.Controls.Add(hyl);
                 obj.Add(cell);
             }

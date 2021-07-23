@@ -21,7 +21,7 @@ namespace SE1436_Group2_Project.GUI
             SqlCommand sql = new SqlCommand("UPDATE [csProject].[dbo].[room] SET [status] = 0 WHERE room = @r");
             sql.Parameters.AddWithValue("@r", room);
             DAO.UpdateTable(sql);
-            Response.Redirect("Checkout.aspx");
+            Response.Redirect("../Checkout.aspx");
         }
     }
 }

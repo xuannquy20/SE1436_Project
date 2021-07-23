@@ -24,7 +24,7 @@ namespace SE1436_Group2_Project.GUI
             SqlCommand isrequest = new SqlCommand("Insert into requestCheckout values (@i, 0)");
             isrequest.Parameters.AddWithValue("@i", int.Parse(id));
             DAO.UpdateTable(isrequest);
-            Response.Redirect("HistoryBook.aspx");
+            Response.Redirect("../HistoryBook.aspx");
         }
     }
 }

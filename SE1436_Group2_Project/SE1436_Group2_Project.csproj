@@ -59,16 +59,16 @@
     <Content Include="assets\fonts\fontawesome-webfont.woff2" />
     <Content Include="assets\fonts\FontAwesome.otf" />
     <Content Include="GUI\AllFeedback.aspx" />
-    <Content Include="GUI\checkinroom.aspx" />
+    <Content Include="GUI\NOGUI\checkinroom.aspx" />
     <Content Include="GUI\Checkout.aspx" />
-    <Content Include="GUI\checkoutbook.aspx" />
-    <Content Include="GUI\checkoutroom.aspx" />
-    <Content Include="GUI\checkoutroomoff.aspx" />
+    <Content Include="GUI\NOGUI\checkoutbook.aspx" />
+    <Content Include="GUI\NOGUI\checkoutroom.aspx" />
+    <Content Include="GUI\NOGUI\checkoutroomoff.aspx" />
     <Content Include="GUI\Dangkiphongoffline.aspx" />
     <Content Include="GUI\Dangkiphong.aspx" />
     <Content Include="GUI\DangkyGUI.aspx" />
     <Content Include="GUI\Datphongthanhcong.aspx" />
-    <Content Include="GUI\deletebook.aspx" />
+    <Content Include="GUI\NOGUI\deletebook.aspx" />
     <Content Include="GUI\FeedbackGUI.aspx" />
     <Content Include="GUI\HistoryBook.aspx" />
     <Content Include="GUI\ListroomGUI.aspx" />
@@ -111,11 +111,11 @@
     <Compile Include="GUI\AllFeedback.aspx.designer.cs">
       <DependentUpon>AllFeedback.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\checkinroom.aspx.cs">
+    <Compile Include="GUI\NOGUI\checkinroom.aspx.cs">
       <DependentUpon>checkinroom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GUI\checkinroom.aspx.designer.cs">
+    <Compile Include="GUI\NOGUI\checkinroom.aspx.designer.cs">
       <DependentUpon>checkinroom.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Checkout.aspx.cs">
@@ -125,25 +125,25 @@
     <Compile Include="GUI\Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\checkoutbook.aspx.cs">
+    <Compile Include="GUI\NOGUI\checkoutbook.aspx.cs">
       <DependentUpon>checkoutbook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GUI\checkoutbook.aspx.designer.cs">
+    <Compile Include="GUI\NOGUI\checkoutbook.aspx.designer.cs">
       <DependentUpon>checkoutbook.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\checkoutroom.aspx.cs">
+    <Compile Include="GUI\NOGUI\checkoutroom.aspx.cs">
       <DependentUpon>checkoutroom.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GUI\checkoutroom.aspx.designer.cs">
+    <Compile Include="GUI\NOGUI\checkoutroom.aspx.designer.cs">
       <DependentUpon>checkoutroom.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\checkoutroomoff.aspx.cs">
+    <Compile Include="GUI\NOGUI\checkoutroomoff.aspx.cs">
       <DependentUpon>checkoutroomoff.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GUI\checkoutroomoff.aspx.designer.cs">
+    <Compile Include="GUI\NOGUI\checkoutroomoff.aspx.designer.cs">
       <DependentUpon>checkoutroomoff.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\Dangkiphongoffline.aspx.cs">
@@ -174,11 +174,11 @@
     <Compile Include="GUI\Datphongthanhcong.aspx.designer.cs">
       <DependentUpon>Datphongthanhcong.aspx</DependentUpon>
     </Compile>
-    <Compile Include="GUI\deletebook.aspx.cs">
+    <Compile Include="GUI\NOGUI\deletebook.aspx.cs">
       <DependentUpon>deletebook.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="GUI\deletebook.aspx.designer.cs">
+    <Compile Include="GUI\NOGUI\deletebook.aspx.designer.cs">
       <DependentUpon>deletebook.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI\FeedbackGUI.aspx.cs">
