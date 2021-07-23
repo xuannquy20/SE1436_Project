@@ -19,6 +19,8 @@ namespace SE1436_Group2_Project.GUI
                 Type.Items.Insert(0, new ListItem("Phòng giường đơn", "1"));
                 Type.Items.Insert(1, new ListItem("Phòng giường đôi", "2"));
                 Type.Items.Insert(2, new ListItem("Phòng vip", "3"));
+                checkIn.SelectedDate = DateTime.Today;
+                checkOut.SelectedDate = DateTime.Today.AddDays(1);
                 getFloor();
                 getRoom();
             }
@@ -53,15 +55,18 @@ namespace SE1436_Group2_Project.GUI
         {
             String dateIn = checkIn.SelectedDate.ToString();
             String dateOut = checkOut.SelectedDate.ToString();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[bookOff]([name],[sdt],[room],[datebook],[dateend],[people],[status])"
-                        +"VALUES(@name, @phone, @room, @dateIn , @dateOut, @people , 1)");
-            cmd.Parameters.AddWithValue("@name",name.Text);
-            cmd.Parameters.AddWithValue("@phone", phonenumber.Text);
-            cmd.Parameters.AddWithValue("@room", room.SelectedValue);
-            cmd.Parameters.AddWithValue("@dateIn", dateIn);
-            cmd.Parameters.AddWithValue("@dateOut", dateOut);
-            cmd.Parameters.AddWithValue("@people", human.Text);
-            DAO.UpdateTable(cmd);
+            
+                SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].[bookOff]([name],[sdt],[room],[datebook],[dateend],[people],[status])"
+                         +"VALUES(@name, @phone, @room, @dateIn , @dateOut, @people , 1)");
+                cmd.Parameters.AddWithValue("@name",name.Text);
+                cmd.Parameters.AddWithValue("@phone", phonenumber.Text);
+                cmd.Parameters.AddWithValue("@room", room.SelectedValue);
+                cmd.Parameters.AddWithValue("@dateIn", dateIn);
+                cmd.Parameters.AddWithValue("@dateOut", dateOut);
+                cmd.Parameters.AddWithValue("@people", human.Text);
+                DAO.UpdateTable(cmd);
+
+            
         }
 
         public void UpdateStatus()
@@ -77,6 +82,7 @@ namespace SE1436_Group2_Project.GUI
             InsertBookOffline();
             UpdateStatus();
             Response.Write("<script>alert('Đặt Phòng Thành Công!')</script>");
+            Response.Redirect("Trangchu.aspx");
         }
 
         public void change()
