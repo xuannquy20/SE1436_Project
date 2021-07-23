@@ -12,6 +12,7 @@
             height: 550px;
             border: 2px solid red;
             border-radius: 10px;
+            background-color: white;
         }
 
         .title {
@@ -48,7 +49,7 @@
         height: 61px;
     }
         .auto-style18 {
-            background-color: antiquewhite;
+            background-color: burlywood;
             width: 42%;
             height: 700px;
         }
@@ -56,6 +57,7 @@
             width: 438px;
         }
         .auto-style21 {
+            
             width: 227px;
         }
         #name{
@@ -83,10 +85,10 @@
             <table class="auto-style8">
                 <tr>
                     <td class="auto-style9">
-                        <asp:Label ID="Label1" runat="server" Text="Ngày bắt đầu ở"></asp:Label>
-                        <asp:Calendar ID="checkIn" runat="server" CssClass="auto-style12" Height="256px"></asp:Calendar>
-                        <asp:Label ID="Label2" runat="server" Text="Ngày trả phòng"></asp:Label>
-                        <asp:Calendar ID="checkOut" runat="server"></asp:Calendar>
+                        <asp:Label ID="Label1" runat="server" Text="Ngày bắt đầu ở" CssClass="font-weight-bold"></asp:Label>
+                        <asp:Calendar ID="checkIn" runat="server" CssClass="auto-style12 table-hover" Height="256px"></asp:Calendar>
+                        <asp:Label ID="Label2" runat="server" Text="Ngày trả phòng" CssClass="font-weight-bold"></asp:Label>
+                        <asp:Calendar ID="checkOut" runat="server" CssClass="table-hover"></asp:Calendar>
                     </td>
                     <td class="auto-style21">
                         <div class="box-dangki">

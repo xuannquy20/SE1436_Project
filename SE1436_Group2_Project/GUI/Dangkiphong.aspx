@@ -45,7 +45,7 @@
         height: 61px;
     }
         .auto-style18 {
-            background-color: white;
+            background-color: burlywood;
             width: 42%;
             height: 700px;
         }
@@ -63,6 +63,9 @@
             margin: 0px auto;
         }
         .div-anh{
+            height: 550px;
+            border: 1px solid black;
+            border-radius: 5px;
             padding: 0px 10px;
             background-color: white;
         }

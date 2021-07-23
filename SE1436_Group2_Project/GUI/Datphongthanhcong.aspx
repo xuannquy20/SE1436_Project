@@ -2,12 +2,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
        .lb{
-          display: flex;
-          align-item: center;
           width: 100%;
           height: auto;
        }
        .lbt{
+           width: 100%;
+           display: flex;
+           margin: 0 600px;
        }
     </style>
 </asp:Content>

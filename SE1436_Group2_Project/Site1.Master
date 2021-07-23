@@ -98,7 +98,7 @@ header{ min-height:50px;}
 body{ 
   display:flex; 
   flex-direction:column; 
-  background-color: white;
+  background-color: burlywood;
 }
 
 footer{
